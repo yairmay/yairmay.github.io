@@ -1,0 +1,78 @@
+body { 
+    padding-top: 65px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+
+.row-centered {
+    text-align:center;
+}
+
+.col-centered {
+    display:inline-block;
+    float:none;
+    text-align:left;
+    margin-right:-4px;
+}
+
+footer {
+  font-size: 13px;
+  padding: 20px 0;
+}
+footer .col-sm-4 {
+	padding-top: 13px;
+	text-align: right;
+}
+
+footer .col-sm-8 {
+  display: flex;
+  align-items: left;
+}
+footer ul {
+  list-style: none;
+}
+
+footer li img {
+  width: 42px;
+  height: 42px;
+}
+.temperatureClass {
+	text-align: right;
+	padding-right: 10px;
+	font-weight: bolder;
+	color: white;
+}
+.PARTLY_CLOUDY_DAY, .partly-cloudy-day, .PARTLY_CLOUDY_NIGHT, .partly-cloudy-night {
+    background: url('images/partly-cloudy.jpg') no-repeat;
+	background-size: 100% 100%;
+	color : black;
+    
+}
+.CLEAR_DAY, .clear-day, .CLEAR_NIGHT, .clear-night {
+    background: url('images/clear.jpg') no-repeat;
+	background-size: 100% 100%;
+}
+.CLOUDY, .cloudy {
+    background: url('images/cloudy.jpg') no-repeat;
+	background-size: 100% 100%;
+	color : white;
+}
+
+.RAIN, .rain {
+    background: url('images/rain.jpg') no-repeat;
+	background-size: 100% 100%;
+	color: red;
+}
+.SNOW, .snow {
+    background: url('images/snow.jpg') no-repeat;
+	background-size: 100% 100%;
+}
+.WIND, .wind {
+    background: url('images/windy.jpg') no-repeat;
+	background-size: 100% 100%;
+	color: white;
+}
+.FOG, .fog {
+    background: url('images/fog.jpg') no-repeat;
+	background-size: 100% 100%;
+}

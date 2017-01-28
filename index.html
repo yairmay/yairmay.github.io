@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	
+		<!-- css links -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'><!-- external fonts-->
+		<link rel="stylesheet" href="MyCSS.css">
+		<!-- javascript link-->
+		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="skycons.js"></script>
+		<script src="getforecast.js"></script>
+		<!-- bootstrap - optional theme -->
+		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		-->
+	</head>
+
+	<body><!-- -->
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="my-navbar">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+						<span class="sr-only">Navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					
+					<a href="#" class="navbar-brand">Weather forecast</a>
+				</div>
+				<div class="collapse navbar-collapse" id="navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#" onclick="getWeather('current');">Current Weather</a></li>
+						<li><a href="#" onclick="getWeather('weekly'); return false;">Weekly forecast</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weekly forecast<span class="caret"></span></a>
+							<ul class="dropdown-menu" id="weeklyForecastDropdown">
+								<li><a href="#" onclick="getWeather('0');">Today's forecast</a></li>
+								<li><a href="#" onclick="getWeather('1');">Tomorrow's forecast</a></li>
+								<li><a href="#" onclick="getWeather('2');dat();">The Day After Tomorrow's forecast</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#" onclick="getWeather('refresh'); return false;">Refresh data</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav> <!-- End navbar -->
+	
+
+		<div class="container">
+			<section>
+				<div class="page-header row-centered loading" id="loading">
+					<h2 id="title">Loading...</h2>
+				</div>
+				<div class="row row-centered weatherbox" id="weatherbox">
+					
+					
+				</div>
+				
+			</section>
+		</div>
+		<div id="template" class="col-xs-12 col-sm-4 col-md-3 col-centered" style="display: none;">
+						<div class="panel panel-default text-center">
+							<!--<h4 id="h4p">hello</h4>
+							<p id="para">test</p>
+							<canvas id="iconX" width="128" height="128"></canvas>-->
+						</div>
+					</div>
+	
+	<footer class="container">
+		<div class="row">
+			<p class="col-sm-4 col-xs-6" id="dat">May the rain not find you!</p>
+			<ul class="col-sm-8 col-xs-6">
+				<li class="col-sm-1"><a href="https://www.facebook.com/YairMayer"><img src="images/facebook-small.svg"></a></li>
+				<li class="col-sm-1"><a href="#notUsed"><img src="images/email-small.png"></a></li>
+			</ul>
+		</div>
+	</footer>
+	</body>
+
+</html>
