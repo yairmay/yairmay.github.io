@@ -115,10 +115,6 @@ function cloneTemplate(forecastData,num,date){ // clone box template for reuse.
   cloneTemplate.children[0].appendChild(forecastSummary);
   cloneTemplate.children[0].appendChild(canvas);
   cloneTemplate.children[0].appendChild(forecastTemperature);
-  
-  //cloneTemplate.children[0].children[0].innerHTML = date;
-  //cloneTemplate.children[0].children[1].innerHTML = forecastData.summary;
-  //cloneTemplate.children[0].children[2].setAttribute("id",iconID);
   return cloneTemplate;
 }
 
